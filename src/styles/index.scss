@@ -1,0 +1,51 @@
+@import "./global";
+
+@import "./abstract/animations";
+
+@import "./components/medical-groups";
+@import "./components/text-editor";
+
+:root {
+	font-family: Inter, system-ui, Helvetica, Arial, sans-serif;
+
+	color: #000;
+	background-color: #fff;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	// overscroll-behavior: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0px;
+	font-family: Inter, sans-serif;
+}
+
+::-moz-selection {
+	/* Code for Firefox */
+	color: #814cd6;
+	background: #f2edfc;
+}
+
+::selection {
+	color: #814cd6;
+	background: #f2edfc;
+}
+
+form {
+	width: 100%;
+}

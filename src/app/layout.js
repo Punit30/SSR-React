@@ -1,7 +1,23 @@
-import { Inter } from "next/font/google";
+import "@/styles/index.scss";
+import { Inter, Poppins } from "next/font/google";
+import { Providers } from "./GlobalObjects/store/Providers";
 import "./globals.css";
+import Help from "@/components/common/Modals/Help";
+import Logout from "@/components/common/Modals/Logout";
+import PrePatientRegister from "@/components/common/Modals/PrePatientRegister";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({
+//   weight: ["400", "500", "600", "700", "800", "900"],
+//   subsets: ["latin"],
+//   variable: "--font-inter",
+//   style: ["normal"],
+// });
+// const poppins = Poppins({
+//   weight: ["400", "500", "600", "700", "800", "900"],
+//   subsets: ["latin"],
+//   variable: "--font-poppins",
+//   style: ["normal", "italic"],
+// });
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +27,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <Providers>
+          {children}
+          <Help />
+          <Logout />
+          <PrePatientRegister />
+        </Providers>
+      </body>
     </html>
   );
 }
